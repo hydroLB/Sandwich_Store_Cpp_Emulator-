@@ -1,0 +1,3 @@
+/Users/leonbouramia/Desktop/Local Personal github files/Sandwich_Store_Cpp_Emulator /cmake-build-debug/CMakeFiles/Sandwich_Main.dir
+/Users/leonbouramia/Desktop/Local Personal github files/Sandwich_Store_Cpp_Emulator /cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/leonbouramia/Desktop/Local Personal github files/Sandwich_Store_Cpp_Emulator /cmake-build-debug/CMakeFiles/rebuild_cache.dir
