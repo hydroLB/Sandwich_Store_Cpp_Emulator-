@@ -1,55 +1,32 @@
- # Part of the starter code comes from Professor L. Dion's class.
- # This code was created in collaboration with fellow CS student Maxwell Hughes
+# 🥪 Sandwich Store Emulator 🥪
 
+## 📚 Overview
+This project demonstrates the capabilities of C++ in various areas such as input validation, file writing, execution speed, class inheritance, and file output. The code was developed collaboratively by Maxwell Hughes and myself, building upon starter code provided by Professor L. Dion.
 
- This project was created to demonstrate the power of C++ when it comes to input validation,
- file writing, speed of execution, inheritance class relationships, and file output.
- 
+The application simulates a sandwich store where users can customize their order and view the total price, with the order details being output to a file.
 
- There is one parent sandwich class, which has a bool toasted, string meat, vector<string> topping, and double price.
+## 🥪🥙 Sandwich Classes 🌯🌮
+The core of the project is built around a parent `Sandwich` class, which contains the following properties:
 
- 
- The Chicken, Turkey, and Ham class' inherit from the sandwich class.
-    
-  
- The Chicken sandwich class inherits those 5 fields plus an additional salad option.
-    
+- `bool toasted`
+- `string meat`
+- `vector<string> toppings`
+- `double price`
 
- The Turkey sandwich class has an option for extra cheese, and cranberry sauce, with their prices added to the total.
+Three child classes inherit from the `Sandwich` class: `Chicken`, `Turkey`, and `Ham`. Each class has its own unique properties:
 
+- `Chicken`: Inherits the base properties and adds a `salad` option.
+- `Turkey`: Inherits the base properties and adds options for `extra cheese` and `cranberry sauce`, with their respective prices included in the total.
+- `Ham`: Inherits the base properties and adds an option for `extra meat`. It also includes a choice of `duck-fat fries` or `shoestring fries` at no additional charge.
 
- The Ham class has an additional option extra meat
+## 🛍️ Ordering Process 🍽️
+Users can order a sandwich by choosing from a list of options provided. The application guides them through the customization process, validating their inputs at each step. Once the user has finished customizing their sandwich, the total price for their meal is displayed.
 
+The order details, including the sandwich contents and meal price, are then output to a file for further reference. Users can also select one of the pre-selected sandwiches if they are unsure of what to order.
 
- and comes with a choice of duck-fat fries, or shoestring fries (no charge added).
+🌟 We hope you enjoy using the Sandwich Store Emulator! 🌟
 
+## 🧪 Testing Class 🔬
+The `Testing` class ensures the stability and reliability of the program throughout its lifecycle. It tests the getter and setter methods for each subclass as well as the parent class. By doing so, it verifies the default behavior for each of the three subclasses, ensuring that they adhere to the specified options.
 
- The user will order a sandwich and choose from the lists provided to build their meal, 
-
-
- having their inputs checked as they go along until they finish and the price of their meal is shown.
-
-
- The order and the contents of the sandwich are then printed to an output file alongside the price for their meal!
-
-
- The user could of course choose one of great hand-selected sandwiches if they are unsure what to order!
-
-
- We here at Sandwiche Store Emulator hope you enjoy your meal!
- 
-
-
-# Testing class
-
-The testing class is used to ensure stability of the program through all life-cycles. The testing classes not only tests
-
-the getters and setters for each subclass, it also checks the getters and setters for the parent class 
-
-implicitly as objects are initialized and tested. It checks the default behavior for each of the three subclasses, 
-
-ensuring they are defaulting to the correct options as specified. It also checks the non-default constructor behavior 
-
-by passing in various values and checking to see they were properly fit into the object's fields. This ensures no fields
-
-values are placed in the wrong spot which would cause an ordering mess!
+The non-default constructor behavior is also tested by passing in various values and checking if they are correctly assigned to the corresponding object fields. This helps to prevent any potential ordering issues caused by field values being misplaced.
