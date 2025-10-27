@@ -15,3 +15,7 @@ build/
 coverage/
 target/
 __pycache__/
+.repo/
+.repowizard/
+git-autosnap.sh
+gitleaks-prepush.json
