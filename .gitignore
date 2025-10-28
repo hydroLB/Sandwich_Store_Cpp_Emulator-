@@ -24,3 +24,4 @@ pre-commit 2
 pre-push
 pre-push 2
 post-commit
+.vscode/
