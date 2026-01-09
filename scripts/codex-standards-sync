@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+OWNER="hydroLB"
+STANDARDS_REPO="engineering-standards"
+REF="main"
+STANDARDS_FILE="STANDARDS_CODEBASE_PROMPT.md"
+
+command -v gh >/dev/null 2>&1 || { echo "ERROR: gh not found. Install it, then run: gh auth login" >&2; exit 1; }
+
+mkdir -p ".local/standards"
+
+gh api -H "Accept: application/vnd.github.raw" \
+  "/repos/${OWNER}/${STANDARDS_REPO}/contents/${STANDARDS_FILE}?ref=${REF}" \
+  > ".local/standards/${STANDARDS_FILE}"
+
+mkdir -p "$HOME/.codex"
+cp ".local/standards/${STANDARDS_FILE}" "$HOME/.codex/AGENTS.override.md"
+
+echo "Synced standards:"
+echo "  Repo copy:   /Users/leonbouramia/.local/standards/${STANDARDS_FILE}"
+echo "  Codex file:  $HOME/.codex/AGENTS.override.md"

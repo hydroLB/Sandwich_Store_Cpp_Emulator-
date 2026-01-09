@@ -25,3 +25,5 @@ pre-push
 pre-push 2
 post-commit
 .vscode/
+
+.local/
